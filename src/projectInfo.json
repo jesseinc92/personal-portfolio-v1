@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Newsly",
+      "deployedUrl": "https://startling-wisp-52e360.netlify.app/",
+      "github": "https://github.com/jesseinc92/newsly-frontend",
+      "techStack": [],
+      "description": ""
+    },
+    {
+      "name": "UFO Concept",
+      "deployedUrl": "",
+      "github": "",
+      "techStack": [],
+      "description": ""
+    },
+    {
+      "name": "jGames",
+      "deployedUrl": "https://jgames-capstone.herokuapp.com/",
+      "github": "https://github.com/jesseinc92/jGames",
+      "techStack": [],
+      "description": ""
+    }
+  ]
+}
