@@ -1,20 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 import projects from '../projectInfo.json';
+import FeaturedProject from './FeaturedProject';
+
+const ProjectsSection = styled.section`
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  `
+
+const ProjectsWrapper = styled.div`
+    width: 85vw;
+    margin: auto;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+`
 
 export default function Projects() {
 
-  const Projects = styled.section`
-    width: 100vw;
-    max-width: 1440px;
-    margin: auto;
-  `
-
-  console.log(projects);
-
   return(
-    <Projects>
-      <h1>Projects</h1>
-    </Projects>
+    <ProjectsSection id='projects'>
+      <ProjectsWrapper>
+        <h2>Featured Projects.</h2>
+
+        <div>
+          {projects.featuredProjects.map((project, i) => (
+            <FeaturedProject key={i} project={project} />
+          ))}
+        </div>
+      </ProjectsWrapper>
+    </ProjectsSection>
   )
 }

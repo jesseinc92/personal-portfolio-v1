@@ -1,48 +1,67 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Contact() {
-
-  const Contact = styled.section`
-    width: 100vw;
-    max-width: 1440px;
+const ContactSection = styled.section`
+    width: 100%;
     margin: auto;
+    height: 100vh;
+    max-height: 900px;
+
+    .contact-wrapper {
+      
+    }
+
+    label {
+
+    }
+
+    .text-input {
+      
+    }
   `
 
-  const InputGroup = styled.div`
-  
-  `
+const ContactWrapper = styled.div`
+    padding: 1.25rem;
+    background-color: lightgray;
 
-  const Label = styled.label`
-  
-  `
+    h2 {
+      font-size: 2.5rem;
+    }
+`
 
-  const Input = styled.input`
-  
-  `
+const InputGroup = styled.div`
 
+`
+
+const TextInput = styled.input`
+
+`
+
+export default function Contact({ mobile }) {
   return(
-    <Contact>
-      <h1>Say Hi</h1>
+    <ContactSection id='contact'>
+      <ContactWrapper mobile={mobile}>
+        <h2>Say Hi.</h2>
 
-      <div>
-        <form>
-          <InputGroup>
-            <Label>Name</Label>
-            <Input />
-          </InputGroup>
+        <div>
+          <form>
+            <InputGroup>
+              <label>Name</label>
+              <TextInput />
+            </InputGroup>
 
-          <InputGroup>
-            <Label>Email</Label>
-            <Input />
-          </InputGroup>
+            <InputGroup>
+              <label>Email</label>
+              <TextInput />
+            </InputGroup>
 
-          <InputGroup>
-            <Label>Message</Label>
-            <Input />
-          </InputGroup>
-        </form>
-      </div>
-    </Contact>
+            <InputGroup>
+              <label>Message</label>
+              <TextInput as='textarea' />
+            </InputGroup>
+          </form>
+        </div>
+      </ContactWrapper>
+    </ContactSection>
   )
 }

@@ -4,9 +4,24 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+  overscroll-behavior: none;
+  font-size: 1.25rem;
 }
 
-#root{
-  scroll-snap-type: y mandatory;
+@media (max-width: 767px) {
+  body {
+    font-size: 4.5vw;
+  }
+}
+
+.body-container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .body-container {
+    width: 85vw;
+  }
 }
