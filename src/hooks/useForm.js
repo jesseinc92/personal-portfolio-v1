@@ -1,0 +1,16 @@
+import { useState } from 'react';
+
+export default function useForm(initialState) {
+  const [formData, setFormData] = useState(initialState);
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+
+    setFormData(data => ({
+      ...data,
+      [name]: value
+    }));
+  }
+
+  return [formData, setFormData, handleChange];
+}

@@ -34,8 +34,9 @@ const SkillsWrapper = styled.div`
 `
 
 const HeadshotWrapper = styled.div`
-    width: ${({ mobile }) => mobile ? '75%' : '25%' };
+    width: ${({ mobile }) => mobile ? '85%' : '25%' };
     margin: auto;
+    margin-top: 2rem;
 
     img {
       width: 100%;

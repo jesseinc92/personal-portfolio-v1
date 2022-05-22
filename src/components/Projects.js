@@ -19,7 +19,7 @@ const ProjectsWrapper = styled.div`
     }
 `
 
-export default function Projects() {
+export default function Projects({ mobile }) {
 
   return(
     <ProjectsSection id='projects'>
@@ -28,7 +28,7 @@ export default function Projects() {
 
         <div>
           {projects.featuredProjects.map((project, i) => (
-            <FeaturedProject key={i} project={project} />
+            <FeaturedProject key={i} project={project} mobile={mobile} />
           ))}
         </div>
       </ProjectsWrapper>

@@ -6,6 +6,11 @@ const Feature = styled.article`
     background-color: lightgray;
     padding: 1.25rem;
 
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
     ul {
       margin-top: 1rem;
       display: flex;
@@ -14,6 +19,7 @@ const Feature = styled.article`
 `
 
 const Thumbnail = styled.div`
+    display: ${({ mobile }) => mobile ? 'none' : 'block' };
     width: 85%;
     margin: auto;
 
@@ -29,14 +35,14 @@ const TechTag = styled.li`
     margin-bottom: 0.25rem;
 `
 
-export default function FeaturedProject({ project }) {
+export default function FeaturedProject({ project, mobile }) {
 
   
 
   return(
     <Feature>
       <h3>{ project.name }</h3>
-      <Thumbnail>
+      <Thumbnail mobile={mobile}>
         <img src={`/static/assets/project-thumbnails/${project.photo}`} alt='project thumbnail' />
       </Thumbnail>
       <p>{ project.description }</p>

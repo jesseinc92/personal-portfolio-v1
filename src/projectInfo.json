@@ -9,20 +9,20 @@
       "photo": "newsly.png"
     },
     {
+      "name": "jGames",
+      "deployedUrl": "https://jgames-capstone.herokuapp.com/",
+      "github": "https://github.com/jesseinc92/jGames",
+      "techStack": ["Flask", "Jinja", "SQLAlchemy", "Three.js", "Heroku"],
+      "description": "jGames is an app that allows a user to create a personalized profile and then sort their favorite video games into lists! A user can create as many lists as they want and mix and match games as much as they want. The only limit is what games they can think of!",
+      "photo": "jgames.png"
+    },
+    {
       "name": "UFO Concept",
       "deployedUrl": "",
       "github": "",
       "techStack": ["React", "React Three Fiber", "Three.js" , "React Spring", "Blender"],
       "description": "Playing around with WebGL and Three.js, I created an interactive concept of a friend's portfolio website. Using established themes and colors, I wanted to see if I could create more value, and ended up having a lot of fun!",
       "photo": ""
-    },
-    {
-      "name": "jGames",
-      "deployedUrl": "https://jgames-capstone.herokuapp.com/",
-      "github": "https://github.com/jesseinc92/jGames",
-      "techStack": ["Three.js", "Flask", "Jinja", "SQLAlchemy", "Heroku"],
-      "description": "jGames is an app that allows a user to create a personalized profile and then sort their favorite video games into lists! A user can create as many lists as they want and mix and match games as much as they want. The only limit is what games they can think of!",
-      "photo": "jgames.png"
     }
   ],
   "otherProjects" : [
