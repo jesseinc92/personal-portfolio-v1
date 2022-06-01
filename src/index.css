@@ -1,18 +1,31 @@
+@font-face {
+  font-family: Stellar-light;
+  src: url(./fonts/stellar-light.otf);
+}
+
+@font-face {
+  font-family: Stellar-bold;
+  src: url(./fonts/stellar-bold.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Stellar-light', sans-serif;
   overscroll-behavior: none;
   font-size: 1.25rem;
 }
 
-@media (max-width: 767px) {
-  body {
-    font-size: 4.5vw;
-  }
+input, textarea {
+  font-family: 'Stellar-light', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Stellar-bold', sans-serif;
 }
 
 .body-container {
@@ -21,6 +34,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 4.5vw;
+  }
+  
   .body-container {
     width: 85vw;
   }

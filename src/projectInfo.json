@@ -4,8 +4,8 @@
       "name": "Newsly",
       "deployedUrl": "https://startling-wisp-52e360.netlify.app/",
       "github": "https://github.com/jesseinc92/newsly-frontend",
-      "techStack": ["React", "Express", "Open Guardian API", "PostgreSQL", "Heroku", "Netlify"],
-      "description": "Newsly is a newsreader app. Being bombarded by articles and headlines and the highs and lows of normal news channels are commonplace in the world today. So with Newsly, I wanted to give users a way to track what they were consuming. For discipline, or for self-care, this mindful app for mindful news consumption was created to put more control in the hands of readers.",
+      "techStack": ["React", "Express", "Guardian API", "PostgreSQL", "Heroku", "Netlify"],
+      "description": "Newsly is a newsreader app that gives users a way to track what type of news they consume. For discipline, or for self-care, this mindful app for mindful news consumption was created to put more control in the hands of readers.",
       "photo": "newsly.png"
     },
     {
@@ -22,7 +22,7 @@
       "github": "",
       "techStack": ["React", "React Three Fiber", "Three.js" , "React Spring", "Blender"],
       "description": "Playing around with WebGL and Three.js, I created an interactive concept of a friend's portfolio website. Using established themes and colors, I wanted to see if I could create more value, and ended up having a lot of fun!",
-      "photo": ""
+      "photo": "ufo.png"
     }
   ],
   "otherProjects" : [

@@ -4,6 +4,7 @@ import Greeting from './Greeting';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 
 
 export default function App() {
@@ -11,9 +12,9 @@ export default function App() {
 
   // set layout to appropriate view upon component mount
   useEffect(() => {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 1000) {
       setMobile(false);
-    } else if (window.innerWidth < 766) {
+    } else if (window.innerWidth < 1001) {
       setMobile(true);
     } 
   }, []);
@@ -21,9 +22,9 @@ export default function App() {
   // handle browswer resizing to make mobile/desktop view responsive
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > 1000) {
         setMobile(false);
-      } else if (window.innerWidth < 766) {
+      } else if (window.innerWidth < 1001) {
         setMobile(true);
       } 
     }
@@ -43,6 +44,7 @@ export default function App() {
         <About mobile={mobile} />
         <Projects mobile={mobile} />
         <Contact mobile={mobile} />
+        <Footer />
       </div>
     </>
   )

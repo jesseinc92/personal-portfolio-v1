@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import anime from 'animejs'
 
 const Navbar = styled.nav`
@@ -17,17 +19,17 @@ const Icon = styled.h1`
 const MenuButton = styled.div`
     grid-column: 5 / 6;
     margin: auto;
-    @media (min-width: 767px) {
+    @media (min-width: 1001px) {
       display: none;
     }
 `
 
 const CloseButton = styled.div`
     position: absolute;
-    margin: 1.5rem;
+    margin: 1.75rem;
     top: 0;
     right: 0;
-    @media (min-width: 767px) {
+    @media (min-width: 1001px) {
       display: none;
     }
 `
@@ -48,7 +50,10 @@ const LinkWrapper = styled.div`
 `
 
 const Link = styled.a`
-
+    text-decoration: none;
+    color: inherit;
+    margin: 1rem;
+    font-size: ${({ mobile }) => mobile ? '1.75rem' : 'inherit' };
 `
 
 export default function Nav({ mobile }) {
@@ -80,15 +85,31 @@ export default function Nav({ mobile }) {
     <Navbar mobile={mobile}>
       <Icon>JH</Icon>
 
-      <MenuButton onClick={menuOpenHandler}>Menu</MenuButton>
+      <MenuButton onClick={menuOpenHandler}>
+        <FontAwesomeIcon icon={faBars} size='xl' />
+      </MenuButton>
 
       <LinkWrapper id='mobile-menu' mobile={mobile}>
-        <CloseButton onClick={menuCloseHandler}>Close</CloseButton>
+        <CloseButton onClick={menuCloseHandler}>
+          <FontAwesomeIcon icon={faXmark} size='xl' />
+        </CloseButton>
 
-        <Link href='#about' onClick={mobileMenuLinkHandler}>About</Link>
-        <Link href='#projects' onClick={mobileMenuLinkHandler}>Projects</Link>
-        <Link href='#contact' onClick={mobileMenuLinkHandler}>Contact</Link>
-        <Link>Resume</Link>
+        <Link 
+          href='#about' 
+          onClick={mobileMenuLinkHandler}
+          mobile={mobile}
+        >About</Link>
+        <Link 
+          href='#projects' 
+          onClick={mobileMenuLinkHandler}
+          mobile={mobile}
+        >Projects</Link>
+        <Link 
+          href='#contact' 
+          onClick={mobileMenuLinkHandler}
+          mobile={mobile}
+        >Contact</Link>
+        <Link mobile={mobile}>Resume</Link>
       </LinkWrapper>
     </Navbar>
   )
