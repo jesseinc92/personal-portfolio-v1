@@ -8,7 +8,6 @@ const Hero = styled.section`
     max-height: 1000px;
 
     @media (min-width: 1001px) {
-      width: 85vw;
       margin: auto;
       padding-top: unset;
     }
@@ -26,7 +25,7 @@ const HeadlineWrapper = styled.div`
     }
     
     .subtitle {
-      font-size: ${({ mobile }) => mobile ? '8vw' : 'clamp(3rem, 4vw, 4.25rem)' };
+      font-size: ${({ mobile }) => mobile ? '8vw' : 'clamp(3rem, 4.5vw, 5.25rem)' };
       margin-bottom: ${({ mobile }) => mobile ? '1rem' : '2rem' };
     }
 

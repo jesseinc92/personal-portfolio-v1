@@ -13,26 +13,40 @@ const ContactSection = styled.section`
   `
 
 const ContactWrapper = styled.div`
-    padding: ${({ mobile }) => mobile ? '1.25rem' : '0' };
-    background-color: lightgray;
+    padding-top: ${({ mobile }) => mobile ? '1.25rem' : '0' };
 
     h2 {
-      font-size: clamp(40px, 2.857vw, 48px);
+      font-size: clamp(40px, 3.25vw, 54px);
+      border-bottom: 5px solid var(--gray);
+      margin-bottom: 2rem;
     }
     
     p {
       margin-bottom: 2rem;
       line-height: 1.5;
+      padding: ${({ mobile }) => mobile ? '2rem 1.25rem 0' : '0' };
     }
 
     .form-wrapper {
-      ${({ mobile }) => !mobile && 'display: flex;'}
-      justify-content: space-around;
-      background-color: #35438a;
-
+      //display: flex;
+      
       form {
-        ${({ mobile }) => !mobile && 'width: 40%;'}
-        margin: auto;
+        //${({ mobile }) => !mobile && 'width: 58%;'}
+        background-color: var(--blue);
+        padding: ${({ mobile }) => mobile ? '0' : '3rem' };
+
+        .submit-btn {
+          margin-left: ${({ mobile }) => mobile ? '1.25rem' : '0' };
+          padding: 0.75rem 1.25rem;
+          font-family: 'Stellar-bold', sans-serif;
+          font-size: ${({ mobile }) => mobile ? '1rem' : '1.75rem' };
+          letter-spacing: 1px;
+          border: none;
+          //border-radius: 0.25rem;
+          background-color: var(--gold);
+          color: var(--blue);
+          cursor: pointer;
+        }
       }
     }
 
@@ -42,31 +56,41 @@ const ContactWrapper = styled.div`
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
       }
 
       @media (min-width: 1001px) {
-        display: block;
+        //display: flex;
         width: 42%;
       }
     }
 `
 
 const SocialsWrapper = styled.div`
-    margin-top: ${({ mobile }) => mobile ? '3rem' : '0' };
-    ${({ mobile }) => !mobile && 'padding: 1rem;'}
+    padding: 1.25rem;
+    padding-top: ${({ mobile }) => mobile ? '3rem' : '0' };
+    background-color: var(--blue);
 `
 
 const InputGroup = styled.div`
     display: flex;
-    flex-direction: column;=
+    flex-direction: column;
     margin-bottom: 1rem;
+    padding: ${({ mobile }) => mobile ? '0 1.25rem' : '0' };
 `
 
 const TextInput = styled.input`
     padding: 0.25rem 0.75rem;
     line-height: 1.5;
     font-size: ${({ mobile }) => mobile ? '1rem' : '1.25rem' };
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    caret-color: white;
+    color: white;
+    resize: none;
+
+    background-color: var(--blue);
 `
 
 const Link = styled.a`
@@ -105,14 +129,13 @@ export default function Contact({ mobile }) {
       <ContactWrapper mobile={mobile}>
         <h2>Say Hi</h2>
        
-
         <div className='form-wrapper'>
           <form onSubmit={sendForm}>
             <p>
               I'm currently open for opportunities and would love to help make
               your next project come to life. Say hi!
             </p>
-            <InputGroup>
+            <InputGroup mobile={mobile}>
               <label htmlFor='name'>Name</label>
               <TextInput 
                 mobile={mobile}
@@ -124,7 +147,7 @@ export default function Contact({ mobile }) {
               />
             </InputGroup>
 
-            <InputGroup>
+            <InputGroup mobile={mobile}>
               <label htmlFor='email'>Email</label>
               <TextInput 
                 mobile={mobile}
@@ -137,7 +160,7 @@ export default function Contact({ mobile }) {
               />
             </InputGroup>
 
-            <InputGroup>
+            <InputGroup mobile={mobile}>
               <label htmlFor='message'>Message</label>
               <TextInput 
                 mobile={mobile}
@@ -146,12 +169,12 @@ export default function Contact({ mobile }) {
                 name='message' 
                 value={formData.message} 
                 onChange={handleChange} 
-                rows='8'
+                rows='3'
                 required 
               />
             </InputGroup>
 
-            <input type='submit' value='Send' />
+            <input className='submit-btn' type='submit' value='Send' />
           </form>
           
           <div className='contact-photo-wrapper'>

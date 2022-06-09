@@ -6,14 +6,19 @@ import anime from 'animejs'
 
 const Navbar = styled.nav`
     position: absolute;
+    //position: sticky;
+    top: 0;
+    z-index: 1;
     width: 100%;
     height: ${({ mobile }) => mobile ? '5rem' : '6rem' };
     display: grid;
     grid-template-columns: ${({ mobile }) => mobile ? 'repeat(5, 1fr)' : 'repeat(12, 1fr)' };
+    //background-color: var(--space-black);
   `
 
 const Icon = styled.h1`
     margin: auto;
+    font-size: 3rem;
 `
 
 const MenuButton = styled.div`
@@ -44,7 +49,7 @@ const LinkWrapper = styled.div`
     flex-direction: ${({ mobile }) => mobile ? 'column' : 'row' };
     justify-content: ${({ mobile }) => mobile ? 'center' : 'space-around' };
     align-items: center;
-    background-color: white;
+    background-color: ${({ mobile }) => mobile ? 'var(--red)' : 'rgba(0, 0, 0, 0)' };
 
     ${({ mobile }) => !mobile && 'grid-column: 9 / 13;'}
 `
@@ -54,6 +59,7 @@ const Link = styled.a`
     color: inherit;
     margin: 1rem;
     font-size: ${({ mobile }) => mobile ? '1.75rem' : 'inherit' };
+    padding: 0.25rem 0.75rem;
 `
 
 export default function Nav({ mobile }) {
@@ -75,7 +81,7 @@ export default function Nav({ mobile }) {
     })
   }
 
-  const mobileMenuLinkHandler = () => {
+  const menuLinkHandler = () => {
     if (mobile) {
       menuCloseHandler();
     }
@@ -96,17 +102,17 @@ export default function Nav({ mobile }) {
 
         <Link 
           href='#about' 
-          onClick={mobileMenuLinkHandler}
+          onClick={menuLinkHandler}
           mobile={mobile}
         >About</Link>
         <Link 
           href='#projects' 
-          onClick={mobileMenuLinkHandler}
+          onClick={menuLinkHandler}
           mobile={mobile}
         >Projects</Link>
         <Link 
           href='#contact' 
-          onClick={mobileMenuLinkHandler}
+          onClick={menuLinkHandler}
           mobile={mobile}
         >Contact</Link>
         <Link mobile={mobile}>Resume</Link>

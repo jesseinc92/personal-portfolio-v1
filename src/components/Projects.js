@@ -15,8 +15,9 @@ const ProjectsWrapper = styled.div`
     margin: auto;
 
     h2 {
-      font-size: clamp(40px, 2.857vw, 48px);
+      font-size: clamp(40px, 3.25vw, 54px);
       margin-bottom: ${({ mobile }) => mobile ? '2rem' : '5rem' };
+      border-bottom: 5px solid var(--gray);
     }
 `
 
@@ -29,7 +30,7 @@ export default function Projects({ mobile }) {
 
         <div>
           {projects.featuredProjects.map((project, i) => (
-            <FeaturedProject key={i} project={project} mobile={mobile} />
+            <FeaturedProject key={i} index={i} project={project} mobile={mobile} />
           ))}
         </div>
       </ProjectsWrapper>

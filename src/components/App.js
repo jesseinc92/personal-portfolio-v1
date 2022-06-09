@@ -5,6 +5,7 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import Starfield from './Starfield';
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
   return(
     <>
       <Nav mobile={mobile} />
+      <Starfield />
       <div className='body-container'>
         <Greeting mobile={mobile} />
         <About mobile={mobile} />

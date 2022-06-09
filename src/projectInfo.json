@@ -4,7 +4,7 @@
       "name": "Newsly",
       "deployedUrl": "https://startling-wisp-52e360.netlify.app/",
       "github": "https://github.com/jesseinc92/newsly-frontend",
-      "techStack": ["React", "Express", "Guardian API", "PostgreSQL", "Heroku", "Netlify"],
+      "techStack": ["React", "Express", "Guardian API", "PostgreSQL", "Netlify"],
       "description": "Newsly is a newsreader app that gives users a way to track what type of news they consume. For discipline, or for self-care, this mindful app for mindful news consumption was created to put more control in the hands of readers.",
       "photo": "newsly.png"
     },
@@ -13,14 +13,14 @@
       "deployedUrl": "https://jgames-capstone.herokuapp.com/",
       "github": "https://github.com/jesseinc92/jGames",
       "techStack": ["Flask", "Jinja", "SQLAlchemy", "Three.js", "Heroku"],
-      "description": "jGames is an app that allows a user to create a personalized profile and then sort their favorite video games into lists! A user can create as many lists as they want and mix and match games as much as they want. The only limit is what games they can think of!",
+      "description": "jGames is an app that allows a user sort their favorite video games into lists! A user can create as many lists as they want and mix and match games as much as they want. The only limit is what games they can think of!",
       "photo": "jgames.png"
     },
     {
-      "name": "UFO Concept",
+      "name": "UFO Concept (Work In Progress)",
       "deployedUrl": "",
       "github": "",
-      "techStack": ["React", "React Three Fiber", "Three.js" , "React Spring", "Blender"],
+      "techStack": ["React", "R3F", "Three.js" , "React Spring", "Blender"],
       "description": "Playing around with WebGL and Three.js, I created an interactive concept of a friend's portfolio website. Using established themes and colors, I wanted to see if I could create more value, and ended up having a lot of fun!",
       "photo": "ufo.png"
     }

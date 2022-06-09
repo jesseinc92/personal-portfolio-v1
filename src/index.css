@@ -8,16 +8,30 @@
   src: url(./fonts/stellar-bold.otf);
 }
 
+:root {
+  --gray: #6e7887;
+  --gold: #fbc20d;
+  --red: #ad0024;
+  --blue: #4356b1;
+  --space-black: #1d2234;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Stellar-light', sans-serif;
   overscroll-behavior: none;
   font-size: 1.25rem;
+  background-color: var(--space-black);
+  color: white;
 }
 
 input, textarea {
@@ -26,6 +40,7 @@ input, textarea {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Stellar-bold', sans-serif;
+  width: fit-content;
 }
 
 .body-container {
